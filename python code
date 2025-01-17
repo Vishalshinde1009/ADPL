@@ -1,0 +1,25 @@
+ # Prompt the user for inputs
+a = float(input("Enter the 1st number: "))
+b = float(input("Enter the 2nd number: "))
+ch = input("Enter an operation (+, -, *, /): ")
+
+# Initialize the result variable
+result = None
+
+# Perform the chosen operation
+if ch == '+':
+    result = a + b
+elif ch == '-':
+    result = a - b
+elif ch == '*':
+    result = a * b
+elif ch == '/':
+    if b != 0:
+        result = a / b
+    else:
+        result = "Error: Division by zero is not allowed."
+else:
+    result = "Error: Invalid operation."
+
+# Display the result
+print(f"{a} {ch} {b} = {result}")
